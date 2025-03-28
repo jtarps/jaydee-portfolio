@@ -11,35 +11,35 @@ export default function WorksPage() {
             <li>
               <strong>Uncle</strong> - Appliance subscription platform for
               Africa.
-              <Link href="/projects/uncle-ke" className="ml-2 underline">
+              <Link href="/projects/uncle-ke">
                 →
               </Link>
             </li>
             <li>
               <strong>Avian</strong> - International student recruitment
               platform
-              <Link href="/projects/avian" className="ml-2 underline">
+              <Link href="/projects/avian">
                 →
               </Link>
             </li>
             <li>
               <strong>Mento Card</strong> - Digital business card platform (QR +
               NFC). Solo built on Bubble.
-              <Link href="/projects/mento" className="ml-2 underline">
+              <Link href="/projects/mento">
                 →
               </Link>
             </li>
             <li>
               <strong>Evisa Platfrom</strong> - Streamlined online visa
               processing platform for a developing country
-              <Link href="/projects/evisa" className="ml-2 underline">
+              <Link href="/projects/evisa">
                 →
               </Link>
             </li>
             <li>
               <strong>Hawa Coliving</strong> - Coliving project to help digital
               nomads live and work in beautiful locations across Africa.
-              <Link href="/projects/hawa" className="ml-2 underline">
+              <Link href="/projects/hawa">
                 →
               </Link>
             </li>
@@ -47,7 +47,7 @@ export default function WorksPage() {
               <strong>MortgageMate AI</strong> - A tool to automate mortgage
               underwriting for independate mortgage agents. Built with OpenAi
               and Streamlit.
-              <Link href="/projects/mortgagemate" className="ml-2 underline">
+              <Link href="/projects/mortgagemate">
                 →
               </Link>
             </li>
