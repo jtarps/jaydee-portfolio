@@ -12,35 +12,35 @@ export default function WorksPage() {
               <strong>Uncle</strong> - Appliance subscription platform for
               Africa.
               <Link href="/projects/uncle-ke" className="ml-2 underline">
-                View Case Study
+                →
               </Link>
             </li>
             <li>
               <strong>Avian</strong> - International student recruitment
               platform
               <Link href="/projects/avian" className="ml-2 underline">
-                View Case Study
+                →
               </Link>
             </li>
             <li>
               <strong>Mento Card</strong> - Digital business card platform (QR +
               NFC). Solo built on Bubble.
               <Link href="/projects/mento" className="ml-2 underline">
-                View Case Study
+                →
               </Link>
             </li>
             <li>
               <strong>Evisa Platfrom</strong> - Streamlined online visa
               processing platform for a developing country
               <Link href="/projects/evisa" className="ml-2 underline">
-                View Case Study
+                →
               </Link>
             </li>
             <li>
               <strong>Hawa Coliving</strong> - Coliving project to help digital
               nomads live and work in beautiful locations across Africa.
               <Link href="/projects/hawa" className="ml-2 underline">
-                View Case Study
+                →
               </Link>
             </li>
             <li>
@@ -48,7 +48,7 @@ export default function WorksPage() {
               underwriting for independate mortgage agents. Built with OpenAi
               and Streamlit.
               <Link href="/projects/mortgagemate" className="ml-2 underline">
-                View Case Study
+                →
               </Link>
             </li>
           </ul>
@@ -60,10 +60,15 @@ export default function WorksPage() {
           <ul className="space-y-4 text-sm">
             <li>
               <strong>
-                <Link href="https://uncle.ke" target="_blank" className="underline">
+                <Link
+                  href="https://uncle.ke"
+                  target="_blank"
+                  className="underline"
+                >
                   Uncle.ke
                 </Link>
-              </strong> — CEO & Founder (2023 – 2024)
+              </strong>{" "}
+              — CEO & Founder (2023 – 2024)
               <p>
                 Pioneered appliance rental in Kenya. Led ops, funding, and
                 growth strategy.
@@ -71,10 +76,15 @@ export default function WorksPage() {
             </li>
             <li>
               <strong>
-                <Link href="https://www.8b.africa" target="_blank" className="underline">
+                <Link
+                  href="https://www.8b.africa"
+                  target="_blank"
+                  className="underline"
+                >
                   8B Education Investments
                 </Link>
-              </strong> — VP, Partnerships (2022 – 2023)
+              </strong>{" "}
+              — VP, Partnerships (2022 – 2023)
               <p>
                 Drove education financing partnerships, enrollment growth, and
                 digital outreach.
@@ -82,10 +92,15 @@ export default function WorksPage() {
             </li>
             <li>
               <strong>
-                <Link href="https://www.avianedu.com" target="_blank" className="underline">
+                <Link
+                  href="https://www.avianedu.com"
+                  target="_blank"
+                  className="underline"
+                >
                   Avian
                 </Link>
-              </strong> — Founder & CEO (2020 – 2022)
+              </strong>{" "}
+              — Founder & CEO (2020 – 2022)
               <p>
                 Built student recruitment platform. Acquired by 8B Education
                 Investments.
@@ -93,10 +108,15 @@ export default function WorksPage() {
             </li>
             <li>
               <strong>
-                <Link href="https://www.pearson.com" target="_blank" className="underline">
+                <Link
+                  href="https://www.pearson.com"
+                  target="_blank"
+                  className="underline"
+                >
                   Pearson Education
                 </Link>
-              </strong> — Sales & Editorial Rep (2017 – 2019)
+              </strong>{" "}
+              — Sales & Editorial Rep (2017 – 2019)
               <p>
                 Managed university accounts and aligned textbooks with learning
                 outcomes.
@@ -104,10 +124,15 @@ export default function WorksPage() {
             </li>
             <li>
               <strong>
-                <Link href="https://1millionteachers.com" target="_blank" className="underline">
+                <Link
+                  href="https://1millionteachers.com"
+                  target="_blank"
+                  className="underline"
+                >
                   1 Million Teachers
                 </Link>
-              </strong> — Head of Partnerships (2019 – 2020)
+              </strong>{" "}
+              — Head of Partnerships (2019 – 2020)
               <p>
                 Scaled nonprofit teacher education in Africa through strategic
                 partnerships.
@@ -210,6 +235,13 @@ export default function WorksPage() {
             </Link>
           </div>
         </section>
+        <a
+          href="/resume.pdf"
+          download
+          className="inline-flex items-center mt-4 text-sm font-medium text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white transition-colors duration-200"
+        >
+          Download Resume →
+        </a>
       </main>
     );
 }

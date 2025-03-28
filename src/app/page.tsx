@@ -15,6 +15,13 @@ export default function HomePage() {
           education, ecommerce, logistics, and government. I'm curently open to
           roles in product, partnerships, and platform strategy.
         </p>
+        <a
+          href="/resume.pdf"
+          download
+          className="inline-flex items-center mt-4 text-sm font-medium text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white transition-colors duration-200"
+        >
+          download my resume →
+        </a>
       </section>
 
       <section>
