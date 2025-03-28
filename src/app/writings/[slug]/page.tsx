@@ -12,21 +12,44 @@ export async function generateStaticParams() {
   }));
 }
 
-type Params = {
-  params: {
-    slug: string;
-  };
-};
+export async function generateMetadata({ params }: any) {
+  const filePath = path.join(
+    process.cwd(),
+    "content/writings",
+    `${params.slug}.mdx`
+  );
+  try {
+    const fileContent = await fs.readFile(filePath, "utf-8");
+    const { data } = matter(fileContent);
+    return {
+      title: data.title || "Writing",
+      description: data.description || "Blog post by Jaydee Tarpeh",
+      openGraph: {
+        title: data.title,
+        description: data.description,
+        type: "article",
+      },
+    };
+  } catch {
+    return {
+      title: "Not Found",
+    };
+  }
+}
 
-export default async function BlogPostPage({ params }: Params) {
-  const { slug } = params;
+export default async function BlogPostPage({ params }: any) {
+  const slug = params?.slug;
+
+  if (!slug) {
+    notFound();
+  }
+
   const filePath = path.join(process.cwd(), "content/writings", `${slug}.mdx`);
 
   let fileContent: string;
-
   try {
     fileContent = await fs.readFile(filePath, "utf-8");
-  } catch {
+  } catch (err) {
     notFound();
   }
 
