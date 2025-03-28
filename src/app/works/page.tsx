@@ -76,7 +76,7 @@ export default function WorksPage() {
           <ExperienceCard
             company="Uncle.ke"
             role="CEO & Founder"
-            industry="E-commerce, Retail, Logistics"
+            industry="#E-commerce, #Retail, #Logistics"
             years="2023 – 2024"
             description="Pioneered appliance rental in Kenya. Led ops, funding, and growth strategy."
             link="https://uncle.ke"
@@ -84,7 +84,7 @@ export default function WorksPage() {
           <ExperienceCard
             company="8B Education Investments"
             role="VP, Partnerships"
-            industry="Education Finance, Social Impact, International Students"
+            industry="#Education Finance, #Social Impact, #International Students"
             years="2022 – 2023"
             description="Drove education financing partnerships, enrollment growth, and digital outreach."
             link="https://www.8b.africa"
@@ -92,7 +92,7 @@ export default function WorksPage() {
           <ExperienceCard
             company="Avian"
             role="Founder & CEO"
-            industry="EdTech, Student Recruitment"
+            industry="#EdTech, #Student Recruitment"
             years="2020 – 2022"
             description="Built student recruitment platform. Acquired by 8B Education Investments."
             link="https://www.avianedu.com"
@@ -100,7 +100,7 @@ export default function WorksPage() {
           <ExperienceCard
             company="Pearson Education"
             role="Sales & Editorial Rep"
-            industry="Publishing, Higher Education"
+            industry="#Publishing, #Higher Education"
             years="2017 – 2019"
             description="Managed university accounts and aligned textbooks with learning outcomes."
             link="https://www.pearson.com"
@@ -108,7 +108,7 @@ export default function WorksPage() {
           <ExperienceCard
             company="1 Million Teachers"
             role="Head of Partnerships"
-            industry="Education, Nonprofit, E-Learning"
+            industry="#Education, #Nonprofit, #E-Learning"
             years="2019 – 2020"
             description="Scaled nonprofit teacher education in Africa through strategic partnerships."
             link="https://1millionteachers.com"
