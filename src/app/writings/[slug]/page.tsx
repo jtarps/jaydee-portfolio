@@ -4,6 +4,14 @@ import { notFound } from "next/navigation";
 import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
 
+export async function generateStaticParams() {
+  const dir = path.join(process.cwd(), "content/writings");
+  const files = await fs.readdir(dir);
+  return files.map((file) => ({
+    slug: file.replace(/\.mdx$/, ""),
+  }));
+}
+
 type Params = {
   params: {
     slug: string;
