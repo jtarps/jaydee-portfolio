@@ -30,7 +30,7 @@ export default function WorksPage() {
             <strong>Mento Card</strong> - Digital business card platform (QR +
             NFC). Solo built on Bubble.
             <Link
-              href="/projects/mento"
+              href="/projects/mento-card"
               className="inline-block align-middle text-base ml-1"
             >
               ↗
@@ -40,7 +40,7 @@ export default function WorksPage() {
             <strong>Evisa Platfrom</strong> - Streamlined online visa processing
             platform for a developing country
             <Link
-              href="/projects/evisa"
+              href="/projects/evisa-platform"
               className="inline-block align-middle text-base ml-1"
             >
               ↗
@@ -50,7 +50,7 @@ export default function WorksPage() {
             <strong>Hawa Coliving</strong> - Coliving project to help digital
             nomads live and work in beautiful locations across Africa.
             <Link
-              href="/projects/hawa"
+              href="/projects/hawa-coliving"
               className="inline-block align-middle text-base ml-1"
             >
               ↗
@@ -60,7 +60,7 @@ export default function WorksPage() {
             <strong>MortgageMate AI</strong> - Tool to automate mortgage
             underwriting. Built with OpenAi and Streamlit.
             <Link
-              href="/projects/mortgagemate"
+              href="/projects/mortgagemate-ai"
               className="inline-block align-middle text-base ml-1"
             >
               ↗

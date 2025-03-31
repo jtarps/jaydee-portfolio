@@ -19,6 +19,20 @@ export default function WritingsPage() {
 
   return (
     <main className="space-y-14 mt-10">
+      {/* Local Writings */}
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Thoughts</h2>
+        <ul className="list-disc list-inside text-sm space-y-2">
+          {posts.map((post) => (
+            <li key={post.slug}>
+              <Link href={`/writings/${post.slug}`} className="underline">
+                {post.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       {/* Beehiiv Writings */}
       <section>
         <h2 className="text-2xl font-semibold mb-4">
@@ -61,20 +75,6 @@ export default function WritingsPage() {
               Browse All Posts →
             </Link>
           </li>
-        </ul>
-      </section>
-
-      {/* Local Writings */}
-      <section>
-        <h2 className="text-2xl font-semibold mb-4">Other Writings</h2>
-        <ul className="list-disc list-inside text-sm space-y-2">
-          {posts.map((post) => (
-            <li key={post.slug}>
-              <Link href={`/writings/${post.slug}`} className="underline">
-                {post.title}
-              </Link>
-            </li>
-          ))}
         </ul>
       </section>
     </main>

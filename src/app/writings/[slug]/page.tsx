@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: any) {
     const { data } = matter(fileContent);
     return {
       title: data.title || "Writing",
-      description: data.description || "Blog post by Jaydee Tarpeh",
+      description: data.description || "Blog post by Jaydee",
       openGraph: {
         title: data.title,
         description: data.description,
@@ -58,6 +58,9 @@ export default async function BlogPostPage(props: any) {
 
   return (
     <main className="prose prose-neutral dark:prose-invert max-w-none mt-10 space-y-6">
+      <a href="/writings" className="text-sm text-gray-500 dark:text-gray-400 hover:underline block">
+        ← Back to Writings
+      </a>
       <h1>{data.title}</h1>
       <MDXRemote source={content} />
     </main>
