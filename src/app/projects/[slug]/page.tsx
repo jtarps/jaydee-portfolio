@@ -1,12 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
-interface ProjectProps {
-  params: {
-    slug: string;
-  };
-}
-
 const projects = {
   "uncle-ke": {
     title: "Uncle.ke",
@@ -93,7 +87,7 @@ export async function generateStaticParams() {
   return Object.keys(projects).map((slug) => ({ slug }));
 }
 
-const ProjectPage = async ({ params }: ProjectProps) => {
+export default async function ProjectPage({ params }: any) {
   const project = projects[params.slug as keyof typeof projects];
 
   if (!project) {
@@ -151,5 +145,3 @@ const ProjectPage = async ({ params }: ProjectProps) => {
     </main>
   );
 }
-
-export default ProjectPage;
