@@ -93,7 +93,7 @@ export async function generateStaticParams() {
   return Object.keys(projects).map((slug) => ({ slug }));
 }
 
-export default function ProjectPage({ params }: ProjectProps) {
+const ProjectPage = async ({ params }: ProjectProps) => {
   const project = projects[params.slug as keyof typeof projects];
 
   if (!project) {
@@ -151,3 +151,5 @@ export default function ProjectPage({ params }: ProjectProps) {
     </main>
   );
 }
+
+export default ProjectPage;
