@@ -1,36 +1,28 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import ThemeWrapper from "@/components/ThemeWrapper";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Jaydee Tarpeh – Product Builder, Founder, Explorer",
+  title: "Jaydee Tarpeh",
   description:
-    "Jaydee Tarpeh is a Liberian-born Canadian product leader building across Africa and beyond. Portfolio of products, writings, and ideas.",
+    "Born in Liberia. Building things with Claude Code. Toronto-based.",
   metadataBase: new URL("https://jayd.ee"),
   openGraph: {
     title: "Jaydee Tarpeh",
     description:
-      "Founder, product leader, and explorer. Building ambitious projects across North America, Africa and the globe.",
+      "Born in Liberia. Building things with Claude Code. Toronto-based.",
     url: "https://jayd.ee",
-    siteName: "Jaydee Tarpeh",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Jaydee Tarpeh",
-      },
-    ],
+    siteName: "Jaydee",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Jaydee Tarpeh",
     description:
-      "Founder, product leader, and explorer. Building ambitious projects across Africa and the globe.",
-    images: ["/og-image.jpg"],
+      "Born in Liberia. Building things with Claude Code. Toronto-based.",
   },
 };
 
@@ -40,11 +32,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body
-        className={`${inter.className} transition-colors bg-white text-black dark:bg-black dark:text-white`}
-      >
+    <html lang="en" className="transition-colors" suppressHydrationWarning>
+      <body className={`min-h-screen ${inter.className}`}>
         <ThemeWrapper>{children}</ThemeWrapper>
+        <Analytics />
       </body>
     </html>
   );

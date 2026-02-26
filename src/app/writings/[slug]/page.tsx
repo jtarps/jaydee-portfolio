@@ -61,7 +61,7 @@ export default async function BlogPostPage(props: any) {
       <a href="/writings" className="text-sm text-gray-500 dark:text-gray-400 hover:underline block">
         ← Back to Writings
       </a>
-      <h1>{data.title}</h1>
+      <h1 className="text-3xl font-bold">{data.title}</h1>
       <MDXRemote source={content} />
     </main>
   );

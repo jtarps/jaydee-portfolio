@@ -1,26 +1,61 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --muted: #6b7280;
+  --input-bg: #f9fafb;
+  --input-border: #d1d5db;
+  --card-bg: #f3f4f6;
+  --progress-bg: #e5e7eb;
+  --progress-fill: #10b981;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --muted: #9ca3af;
+  --input-bg: #1f2937;
+  --input-border: #374151;
+  --card-bg: #111827;
+  --progress-bg: #374151;
+  --progress-fill: #10b981;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+input[type="text"],
+input[type="email"] {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--foreground);
+}
+
+input::placeholder {
+  color: var(--muted);
+}
+
+button[type="submit"] {
+  background-color: black;
+  color: white;
+}
+
+.dark button[type="submit"] {
+  background-color: white;
+  color: black;
+}
+
+.card {
+  background-color: var(--card-bg);
+  color: var(--foreground);
+  border: 1px solid var(--input-border);
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
