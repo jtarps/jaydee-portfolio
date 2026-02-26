@@ -93,8 +93,23 @@ export default function HomePage() {
 
       <p className="leading-relaxed text-gray-800 dark:text-gray-100">
         Sometimes I yap on the internet too — I&apos;ve built an audience of a
-        few hundred thousand across TikTok and Facebook, with millions of likes
-        and views.
+        few hundred thousand across{" "}
+        <Link
+          href="https://tiktok.com/@jaydeespeaks"
+          target="_blank"
+          className="underline"
+        >
+          TikTok
+        </Link>{" "}
+        and{" "}
+        <Link
+          href="https://facebook.com/jaydeespeaks"
+          target="_blank"
+          className="underline"
+        >
+          Facebook
+        </Link>
+        , with millions of likes and views.
       </p>
 
       <section className="pt-4 space-y-3">
