@@ -68,9 +68,9 @@ export default function HomePage() {
       </div>
 
       <p className="leading-relaxed text-gray-800 dark:text-gray-100">
-        I like ideas. I like building stuff. I&apos;m not an engineer. But
-        Claude Code has given me the superpower to get things out of my head
-        and into the world. And you will hear about it{" "}
+        I like ideas. I like building stuff. I&apos;m not an engineer. Claude
+        Code has given me the superpower to get things out of my head and into
+        the world. And you will hear about it{" "}
         <Link href="/works" className="underline">
           here
         </Link>
