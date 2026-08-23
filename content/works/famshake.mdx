@@ -1,0 +1,124 @@
+---
+title: "FamShake"
+slug: "famshake"
+description: "A check-in app for the people you love."
+url: "https://apps.apple.com/app/famshake/id6758928561"
+platforms: ["ios"]
+year: 2026
+status: "shipped"
+---
+
+## The story
+
+Mar 2026
+
+FamShake is live on the App Store.
+
+It's a simple idea: shake your phone to let the people who care about you know you're okay. That's it. No feeds, no likes, no algorithm. Just a daily check-in with your circle.
+
+This is the story of how it went from an idea to a shipped product.
+
+---
+
+## The Why
+
+The idea was planted when a friend called to tell me his uncle had died. Found at home in bed — a week after he passed. Alone. No one had been able to reach him, but he was the quiet type, so everyone assumed he was okay.
+
+That stuck with me.
+
+We all have people who worry about us. Parents, siblings, partners, close friends. And we all have those moments where we mean to text back, mean to call, mean to check in — and don't.
+
+Not because we don't care. Because life gets in the way.
+
+I wanted something with almost zero friction. Something you could do in two seconds — while waiting for coffee, while walking to your car. Shake your phone, and the people who love you get a notification: "Jaydee is okay."
+
+No conversation required. No guilt. Just a signal that says *I'm here, I'm fine, I'm thinking of you.*
+
+And if someone in your circle hasn't checked in? You'd know. And if they actively need help, they can signal that too.
+
+---
+
+## The Build
+
+I went with what I know and what ships fast:
+
+- **Next.js 15** with TypeScript for the web app
+- **Firebase** for auth, Firestore for data, FCM for push notifications
+- **Capacitor** to wrap the web app into a native iOS app
+- **Vercel** for deployment
+- **Tailwind + Shadcn** for the UI
+
+The architecture is straightforward. The Next.js app deploys to Vercel, and the Capacitor iOS app loads the Vercel URL in a native shell. This means every update I push to Vercel is instantly live for all users — no App Store review needed for code changes.
+
+Server actions handle the backend logic. Firebase handles auth (email and phone), real-time data, and push notifications. The whole thing is serverless.
+
+### The Core Loop
+
+The check-in flow is the heart of the app. You open it, shake your phone (or tap "I'm OK"), and a check-in is recorded. Your circle gets notified. Your streak increments.
+
+Behind the scenes, it's a Firestore transaction — reads the user doc, validates the check-in interval, writes the check-in, updates the streak, and fires off a notification. All atomic.
+
+I added configurable check-in intervals (hourly, twice-daily, daily, weekly) because not everyone needs a daily cadence. And emergency alerts for when someone hasn't checked in for too long.
+
+### Shake Detection on iOS
+
+This was trickier than expected. The Web DeviceMotion API works differently in iOS Safari vs. a Capacitor WebView. I ended up using `DeviceMotionEvent` directly and requesting permission explicitly — iOS requires a user gesture to grant motion access.
+
+The shake detection calculates acceleration magnitude across all three axes, with a threshold and cooldown to avoid false triggers. Simple physics, but getting the sensitivity right took some tuning.
+
+---
+
+## Getting to the App Store
+
+Mar 2026
+
+### Rejection After Rejection
+
+Getting through App Store review was a process. I went through 4–6 submissions before finally getting approved. Each time Apple came back with something new:
+
+- **No account deletion** — Apple requires apps with account creation to offer account deletion. I hadn't built that yet.
+- **Missing privacy descriptions** — The motion usage description wasn't set in Info.plist.
+- **Encryption compliance** — Needed to declare that the app doesn't use non-exempt encryption.
+- **Support URL** — Required a support page.
+- Various other issues that required fixes and resubmissions.
+
+Each rejection meant fixing the issue, rebuilding, re-uploading, and waiting for review again. It was a grind — but every rejection taught me something about what Apple expects from a production app.
+
+### Finally Approved
+
+After multiple rounds, the app was approved and went live on March 17th, 2026.
+
+Seeing "Ready for Distribution" in App Store Connect hit different. This thing I built in my apartment is now on the App Store. Anyone with an iPhone can download it.
+
+---
+
+## First Users, First Bugs
+
+**"Firebase: Hostname match not found"** — I hadn't added my Vercel domain to Firebase's authorized domains for phone auth. A two-minute fix in the Firebase Console, but it blocked the very first signup.
+
+Then they tried to check in and got **"Check-in Failed"**. The user had signed up via phone on the login page, which authenticated them but never created their Firestore profile. The check-in transaction expected a user document and crashed when it didn't find one.
+
+The reCAPTCHA widget was also blowing out the mobile layout, pushing the entire login card off-screen.
+
+Three bugs in the first hour of real usage. All of them things I never caught in testing because I always tested with my own account, which already had a profile.
+
+Lesson: your first real user will find bugs you never imagined.
+
+---
+
+## What's Next
+
+FamShake is live and working. People can create circles, invite members, check in, and get notified. The core loop works.
+
+Here's what's on the roadmap:
+
+- **Android** — Capacitor supports it, just need to set up Google Play
+- **Better onboarding** — The first-time experience needs work
+- **Invite improvements** — Deep linking so invite links open the app directly
+- **Contact sync** — Find friends already on FamShake (once there's a user base worth searching)
+
+I'll be writing updates as the project evolves. If you want to try it:
+
+[Download FamShake on the App Store](https://apps.apple.com/app/famshake/id6758928561)
+
+Shake your phone. Let someone know you're okay.

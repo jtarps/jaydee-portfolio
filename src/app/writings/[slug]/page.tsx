@@ -58,7 +58,7 @@ export default async function BlogPostPage(props: any) {
 
   return (
     <main className="prose prose-neutral dark:prose-invert max-w-none mt-10 space-y-6">
-      <a href="/writings" className="text-sm text-gray-500 dark:text-gray-400 hover:underline block">
+      <a href="/writings" className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors block">
         ← Back to Writings
       </a>
       <h1 className="text-3xl font-bold">{data.title}</h1>

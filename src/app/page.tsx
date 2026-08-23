@@ -68,49 +68,65 @@ export default function HomePage() {
       </div>
 
       <p className="leading-relaxed text-gray-800 dark:text-gray-100">
-        I like ideas. I like building stuff. I&apos;m not an engineer. Claude
-        Code has given me the superpower to get things out of my head and into
-        the world. And you will hear about it{" "}
-        <Link href="/works" className="underline">
-          here
-        </Link>
-        .
-      </p>
-
-      <p className="leading-relaxed text-gray-800 dark:text-gray-100 pt-2">
-        Born in Liberia, schooled in Lesotho, and Toronto-based since 2011.
-        I&apos;ve traveled and lived in different parts of the world — most
-        recently Kenya, before coming back in 2024. I run{" "}
-        <Link
-          href="https://havenathome.ca"
-          target="_blank"
-          className="underline"
-        >
+        i like ideas. i like building stuff. not an engineer — but i like getting
+        things out of my head and into the world.
+        Currently building{" "}
+        <Link href="https://havenathome.ca" target="_blank" className="hover:opacity-70 transition-opacity">
           Haven at Home
-        </Link>{" "}
-        — a next-gen home healthcare company.
+        </Link>.
       </p>
 
-      <p className="leading-relaxed text-gray-800 dark:text-gray-100">
-        Sometimes I yap on the internet too — I&apos;ve built an audience of a
-        few hundred thousand across{" "}
-        <Link
-          href="https://tiktok.com/@jaydeespeaks"
-          target="_blank"
-          className="underline"
-        >
-          TikTok
-        </Link>{" "}
-        and{" "}
-        <Link
-          href="https://facebook.com/jaydeespeaks"
-          target="_blank"
-          className="underline"
-        >
-          Facebook
-        </Link>
-        , with millions of likes and views.
-      </p>
+      <section className="space-y-1 pt-2">
+        <p className="text-sm font-medium text-gray-500 dark:text-gray-400 lowercase">
+          about me:
+        </p>
+        <ul className="space-y-1 text-gray-800 dark:text-gray-100">
+          <li>- raised in civil war Liberia</li>
+          <li>- high school in Lesotho</li>
+          <li>- university in Canada</li>
+          <li>- Toronto-based since 2022</li>
+          <li>- lived in Kenya, 2023 to 2024</li>
+          <li>
+            - a few hundred thousand followers across{" "}
+            <Link
+              href="https://tiktok.com/@jaydeespeaks"
+              target="_blank"
+              className="hover:opacity-70 transition-opacity"
+            >
+              TikTok
+            </Link>{" "}
+            and{" "}
+            <Link
+              href="https://facebook.com/jaydeespeaks"
+              target="_blank"
+              className="hover:opacity-70 transition-opacity"
+            >
+              Facebook
+            </Link>
+          </li>
+        </ul>
+      </section>
+
+      <section className="space-y-1 pt-2">
+        <p className="text-sm font-medium text-gray-500 dark:text-gray-400 lowercase">
+          currently:
+        </p>
+        <ul className="space-y-1 text-gray-800 dark:text-gray-100">
+          <li>
+            - shipping things
+          </li>
+          <li>
+            - writing about it{" "}
+            <Link
+              href="/writings"
+              className="hover:opacity-70 transition-opacity"
+            >
+              here
+            </Link>
+          </li>
+          <li>- mostly between 10pm and 2am</li>
+        </ul>
+      </section>
 
       <section className="pt-4 space-y-3">
         <ul className="space-y-3">
@@ -122,11 +138,7 @@ export default function HomePage() {
                 className="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
               >
                 <span className="text-gray-400 dark:text-gray-500">
-                  {s.icon ? (
-                    <s.icon size={18} />
-                  ) : (
-                    <TikTokIcon size={18} />
-                  )}
+                  {s.icon ? <s.icon size={18} /> : <TikTokIcon size={18} />}
                 </span>
                 {s.label}
               </Link>

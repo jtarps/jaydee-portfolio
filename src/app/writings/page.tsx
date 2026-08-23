@@ -42,7 +42,7 @@ export default function WritingsPage() {
             <li key={post.slug} className="text-sm">
               <Link
                 href={`/writings/${post.slug}`}
-                className="font-medium text-gray-900 dark:text-gray-100 underline underline-offset-2"
+                className="font-medium text-gray-900 dark:text-gray-100 hover:opacity-70 transition-opacity"
               >
                 {post.title}
               </Link>
@@ -65,7 +65,7 @@ export default function WritingsPage() {
             <Link
               href="https://thenomadsstoa.beehiiv.com/p/how-anger-can-harm-you"
               target="_blank"
-              className="font-medium text-gray-900 dark:text-gray-100 underline underline-offset-2"
+              className="font-medium text-gray-900 dark:text-gray-100 hover:opacity-70 transition-opacity"
             >
               How anger can harm you
             </Link>
@@ -74,7 +74,7 @@ export default function WritingsPage() {
             <Link
               href="https://thenomadsstoa.beehiiv.com/p/learnings-on-living-and-dying"
               target="_blank"
-              className="font-medium text-gray-900 dark:text-gray-100 underline underline-offset-2"
+              className="font-medium text-gray-900 dark:text-gray-100 hover:opacity-70 transition-opacity"
             >
               Learnings on living and dying
             </Link>
@@ -83,7 +83,7 @@ export default function WritingsPage() {
             <Link
               href="https://thenomadsstoa.beehiiv.com/p/look-to-the-people-around-you"
               target="_blank"
-              className="font-medium text-gray-900 dark:text-gray-100 underline underline-offset-2"
+              className="font-medium text-gray-900 dark:text-gray-100 hover:opacity-70 transition-opacity"
             >
               Look to the people around you for inspiration
             </Link>
